@@ -1,51 +1,67 @@
 # Examination System
 
-## Description
+A C# console application designed to manage and conduct exams, built with a strong focus on Object-Oriented principles.
 
-The **Examination System** is a C# console application designed to manage and conduct exams for different subjects. 
-The system is built using object-oriented principles, featuring a flexible structure to support various exam and question types.
+---
 
-### Key Features
+## 🚀 Key Features
 
 - **Question Modeling:**  
-  Each question has a header, body, mark, and is associated with a list of possible answers. The system supports both Multiple Choice Questions (MCQ) and True/False (TF) questions, using a base `Question` class with specialized subclasses for each type.
+  Supports both Multiple Choice (`MCQ`) and True/False (`TF`) questions, inheriting from a base `Question` class with properties for header, body, mark, and answers.
 
-- **Exam Types:**  
-  The application supports two types of exams:
-  - **Final Exam:** Includes both MCQ and True/False questions.
-  - **Practical Exam:** Includes only MCQ questions.
+- **Flexible Exam Types:**  
+  The application supports two distinct exam formats:
+  - **Final Exam:** A comprehensive test including both `MCQ` and `TF` questions.
+  - **Practical Exam:** A focused test containing only `MCQ` questions.
 
 - **Answer Management:**  
-  Answers are represented by a dedicated class containing an answer ID and answer text. Each question maintains an array of possible answers and the correct answer.
+  A dedicated `Answer` class to handle answer options, correct answer validation, and result evaluation.
 
-- **Exam Structure:**  
-  A base `Exam` class defines common attributes such as exam time, number of questions, and a method to display the exam. This method is implemented differently for each exam type.
+- **Extensible Exam Structure:**  
+  A base `Exam` class defines common attributes (time, number of questions). Subclasses (`FinalExam`, `PracticalExam`) provide specific implementations for how the exam is displayed and graded.
 
 - **Subject Association:**  
-  Each exam is linked to a subject, represented by a `Subject` class containing a subject ID, name, and its associated exam. The system allows for the creation of exams for each subject.
+  Each exam is logically linked to a `Subject`, allowing for organized exam creation and management per subject.
 
-- **Result Display:**  
-  - **Practical Exam:** Shows the correct answers after the exam is completed.
-  - **Final Exam:** Displays all questions, answers, and the final grade.
+- **Clear Result Display:**  
+  - **Practical Exam:** Provides immediate feedback by showing correct answers after completion.
+  - **Final Exam:** Delivers a summary including all questions, user answers, and the final grade.
 
-- **User Interaction:**  
-  The main program allows users to create a subject and generate an exam for it, following the requirements for each exam type.
+---
 
-## Project Structure
+## 🛠️ Tech Stack
 
-- `Program.cs` - Entry point of the application
-- `Exam.cs` - Base class for exams
-- `FinalExam.cs` - Implementation for final exams
-- `PracticalExam.cs` - Implementation for practical exams
-- `Question.cs` - Base class for questions
-- `MCQ Question.cs` - MCQ question implementation
-- `TF Question.cs` - True/False question implementation
-- `Answer.cs` - Handles answers and evaluation logic
+- **Language:** C#
+- **Core Concepts:** Object-Oriented Programming (Inheritance, Polymorphism), SOLID Principles.
 
-## Getting Started
+---
 
-1. **Clone the repository:**
+## 🏛️ Project Structure
 
-   git clone : https://github.com/saramaged12/Examination-System.git
-   
-   
+- `` `Program.cs` ``: Entry point of the application.
+- `` `Exam.cs` ``: Base class for exams.
+- `` `FinalExam.cs` ``: Implementation for final exams.
+- `` `PracticalExam.cs` ``: Implementation for practical exams.
+- `` `Question.cs` ``: Base class for questions.
+- `` `MCQ_Question.cs` ``: MCQ question implementation.
+- `` `TF_Question.cs` ``: True/False question implementation.
+- `` `Answer.cs` ``: Handles answers and evaluation logic.
+
+---
+
+## 📊 Class Diagram
+
+![Class Diagram](https://github.com/saramaged12/Examination-System/blob/master/ExaminationSystem%20Class%20Diagram.drawio.png?raw=true)
+
+---
+
+## 🏁 Getting Started
+
+
+  **Clone the repository:**
+    ```sh
+    git clone  https://github.com/saramaged12/Examination-System.git
+    ```
+
+
+
